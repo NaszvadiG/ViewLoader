@@ -48,10 +48,10 @@ class Loader
         $this->_footer = $view;
     }
 
-    public function setLanguageStrings(array $lang, $prefix)
+    public function setLanguageStrings($prefix)
     {
         $langData = array();
-        foreach ($lang as $k => $v) {
+        foreach ($this->_CI->language as $k => $v) {
             if (strpos($k, $prefix) === 0) {
                 $langData[str_replace($prefix, "", $k)] = $v;
             }
