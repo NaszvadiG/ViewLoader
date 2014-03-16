@@ -51,7 +51,7 @@ class Loader
     public function setLanguageStrings($prefix)
     {
         $langData = array();
-        foreach ($this->_CI->language as $k => $v) {
+        foreach ($this->_CI->lang->language as $k => $v) {
             if (strpos($k, $prefix) === 0) {
                 $langData[str_replace($prefix, "", $k)] = $v;
             }
