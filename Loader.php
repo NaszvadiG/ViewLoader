@@ -59,16 +59,24 @@ class Loader
         $this->_langData = array_merge($this->_langData, $langData);
     }
 
-    public function loadView($view, array $data = array(), $include = true)
-    {
+    public function loadView(
+        $view,
+        array $data = array(),
+        $include = true,
+        $return = false
+    ) {
         $data = array_merge($data, $this->_langData);
+        $views = "";
 
         if ($this->_header !== "" && $include) {
-            $this->_CI->load->view($this->_header, $data);
+            $views .= $this->_CI->load->view($this->_header, $data, $return);
         }
-        $this->_CI->load->view($view, $data);
+        $views .= $this->_CI->load->view($view, $data, $return);
         if ($this->_footer !== "" && $include) {
-            $this->_CI->load->view($this->_footer, $data);
+            $views .= $this->_CI->load->view($this->_footer, $data, $return);
+        }
+        if ($return === true) {
+            return $views;
         }
     }
 }
