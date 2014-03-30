@@ -69,11 +69,23 @@ class Loader
         $views = "";
 
         if ($this->_header !== "" && $include) {
-            $views .= $this->_CI->load->view($this->_header, $data, $return);
+            if ($return === true) {
+                $views .= $this->_CI->load->view($this->_header, $data, true);
+            } else {
+                $this->_CI->load->view($this->_header, $data, false);
+            }
         }
-        $views .= $this->_CI->load->view($view, $data, $return);
+        if ($return === true) {
+            $views .= $this->_CI->load->view($view, $data, true);
+        } else {
+            $this->_CI->load->view($view, $data, false);
+        }
         if ($this->_footer !== "" && $include) {
-            $views .= $this->_CI->load->view($this->_footer, $data, $return);
+            if ($return === true) {
+                $views .= $this->_CI->load->view($this->_footer, $data, true);
+            } else {
+                $this->_CI->load->view($this->_footer, $data, false);
+            }
         }
         if ($return === true) {
             return $views;
