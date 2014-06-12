@@ -19,8 +19,8 @@
 	},
 	"extra":	{
 		"branch-alias": {
-            "dev-master": "0.1.0.x-dev",
-			"dev-develop": "x-dev"
+            "dev-master": "0.1.1.x-dev",
+			"dev-develop": "0.1.0.x-dev"
 		}
 	},
     "target-dir": "SlaxWeb/ViewLoader"
