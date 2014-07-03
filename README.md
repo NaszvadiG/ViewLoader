@@ -41,3 +41,10 @@ $viewLoader->setLanguageStrings("prefix_");
 $viewLoader->loadView("view/file", $dataArray);
 ```
 This takes all the language strings which have their keys prefixed with "prefix_" and injects them into the view data to be used as regular variables. So **$lang["prefix_myString"]** becomes **$myString** in the view.
+
+ChangeLog
+========
+
+1.0.0
+-----
+Initial version
