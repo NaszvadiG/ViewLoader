@@ -2,7 +2,7 @@
     "name": "slaxweb/ci-viewloader",
     "description": "View Loader for CodeIgniter",
     "license": "GPLv3",
-    "version": "1.0.3.0",
+    "version": "1.1.0.0",
     "authors": [
         {
             "name": "Tomaz Lovrec",
