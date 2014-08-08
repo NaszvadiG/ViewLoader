@@ -2,13 +2,13 @@
     "name": "slaxweb/ci-viewloader",
     "description": "View Loader for CodeIgniter",
     "license": "GPLv3",
+    "version": "1.0.3.0",
     "authors": [
         {
             "name": "Tomaz Lovrec",
             "email": "tomaz.lovrec@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
 		"php":	">=5.3.0"
     },
@@ -19,8 +19,7 @@
 	},
 	"extra":	{
 		"branch-alias": {
-            "dev-master": "0.1.1",
-			"dev-develop": "0.2.0"
+			"dev-develop": "1.1.0.x-dev"
 		}
 	},
     "target-dir": "SlaxWeb/ViewLoader"
