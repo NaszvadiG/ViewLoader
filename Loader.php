@@ -65,7 +65,7 @@ class Loader
         $include = true,
         $return = false
     ) {
-        $data = array_merge($data, $this->_langData);
+        $data = array_merge_recursive($data, $this->_langData);
         $views = "";
 
         if ($this->_header !== "" && $include) {
